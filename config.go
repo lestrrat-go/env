@@ -41,7 +41,7 @@ func (c *Config) SetPrefix(prefix string) *Config {
 // VarName formats the given name into an environment variable name
 // using the rules defined by the Config.
 func (c *Config) VarName(name string) string {
-	return c.prefix + c.Separator() + name
+	return c.Prefix() + c.Separator() + name
 }
 
 // Lookup is the same as `os.LookupEnv`, except it formats the
