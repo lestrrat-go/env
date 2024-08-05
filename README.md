@@ -5,7 +5,7 @@ Utilities for accessing environment variables
 # SYNOPSIS
 
 ```go
-import "github.com/lestrrast-go/env"
+import "github.com/lestrrat-go/env"
 
 env.SetPrefix("MYAPP")
 
