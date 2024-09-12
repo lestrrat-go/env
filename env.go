@@ -9,6 +9,13 @@ import (
 var muGlobal sync.RWMutex
 var global Config
 
+// Prefix returns the prefix used to format environment variable names
+func Prefix() string {
+	muGlobal.RLock()
+	defer muGlobal.RUnlock()
+	return global.Prefix()
+}
+
 // SetPrefix sets the prefix used to format environment variable names
 func SetPrefix(prefix string) *Config {
 	muGlobal.Lock()
